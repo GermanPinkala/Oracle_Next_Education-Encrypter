@@ -78,6 +78,29 @@ main {
     border-radius: 32px;
 }
 
+.munieco{
+    width: 340px;
+    height: 308px;
+    position: relative;
+
+}
+
+.output-div{
+    margin: 0 auto;
+}
+
+.output-div h2{
+
+}
+
+.output-div p{
+    position: absolute;
+    width: 336px;
+    margin: 0 1em 3em 1em;
+    bottom: 107px;
+    text-align:center;
+}
+
 .button-copy{
     position: absolute;
     width: 328px;
