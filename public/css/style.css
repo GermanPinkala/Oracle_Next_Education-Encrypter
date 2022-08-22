@@ -1,4 +1,5 @@
 body {
+    font-family: 'Montserrat', sans-serif;
     position: flex;
     margin: 0 auto;
     background-color: aquamarine;
@@ -40,8 +41,20 @@ main {
     background-color: cadetblue;
 }
 
+.normal-text {
+    position: absolute;
+    resize: none;
+    width: 675px;
+    height: calc(100% - 181px);
+}
+
+.notice {
+    display: inline;
+}
+
+
+
 .button-encrypt {
-    
 
     position: absolute;
     width: 328px;
@@ -51,10 +64,11 @@ main {
     border: 2px solid #0A3871;
     bottom: 40px;
     font-size: 16px;
+    font-weight: bold;
     color: #E5E5E5;
 }
 
-.button-decrypt{
+.button-decrypt {
     position: absolute;
     width: 328px;
     height: 67px;
@@ -62,8 +76,10 @@ main {
     background: #E5E5E5;
     border: 2px solid #0A3871;
     bottom: 40px;
-    left: 352px;
+    /* left: 352px; */
+    right: 0;
     font-size: 16px;
+    font-weight: bold;
     color: #0A3871;
 }
 
@@ -76,32 +92,52 @@ main {
     background-color: #FFFFFF;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     border-radius: 32px;
+    display: grid;
+    place-items: center;
 }
 
-.munieco{
+.decrypted-text {
+    position: absolute;
+    resize: none;
+    top: 30px;
+    left: 30px;
+    width: 338px;
+    height: calc(100% - 181px);
+
+}
+
+.output-no-text {
+    /* margin: 0 auto; */
+    position: relative;
+    display: grid;
+    width: 340px;
+    height: 465px;
+    grid-template-rows: auto 1fr auto;
+}
+
+.munieco {
     width: 340px;
     height: 308px;
     position: relative;
 
 }
 
-.output-div{
-    margin: 0 auto;
+.output-no-text h2 {
+    position: absolute;
+    bottom: 64px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
 }
 
-.output-div h2{
-
-}
-
-.output-div p{
+.output-no-text p {
     position: absolute;
     width: 336px;
-    margin: 0 1em 3em 1em;
-    bottom: 107px;
-    text-align:center;
+    bottom: 0px;
+    text-align: center;
 }
 
-.button-copy{
+.button-copy {
     position: absolute;
     width: 328px;
     height: 67px;
@@ -111,6 +147,7 @@ main {
     bottom: 40px;
     left: 36px;
     font-size: 16px;
+    font-weight: bold;
     color: #0A3871;
 }
 

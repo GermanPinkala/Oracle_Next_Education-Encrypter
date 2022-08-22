@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/css/reset.css">
     <link rel="stylesheet" href="../public/css/style.css">
     <link rel="icon" href="../public/img/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
     <title>Encriptador</title>
 </head>
+
 <body>
     <header>
         <img class="logo" src="../public/img/logo.svg" alt="Logo">
@@ -15,26 +21,38 @@
 
     <main>
         <section class="input-text">
+
+            <textarea id="textarea-input" cols="30" rows="10" class="normal-text"></textarea>
+
+            <div class="notice"></div>
+
             <div>
                 <input class="button-encrypt" type="submit" value="Encriptar">
                 <input class="button-decrypt" type="submit" value="Desencriptar">
             </div>
-        </section>
-        <section class="output-text">
-            <img class="munieco" src="../public/img/munieco.svg" alt="">
 
-            <div class="output-div">
+        </section>
+
+        <section class="output-text">
+
+            <textarea id="text-normal" cols="30" rows="10" class="decrypted-text"></textarea>
+
+            <div class="output-no-text">
+                <img class="munieco" src="../public/img/munieco.svg" alt="">
                 <h2>Ningún mensaje fue encontrado</h2>
-                <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+                <p>Ingresa el texto que desees encriptar o
+                    desencriptar.</p>
             </div>
 
-            <input class="button-copy" type="submit" value="Copiar"></section>
-        
+            <input class="button-copy" type="submit" value="Copiar">
+        </section>
+
     </main>
 
     <footer>
 
     </footer>
-    
+
 </body>
+
 </html>
