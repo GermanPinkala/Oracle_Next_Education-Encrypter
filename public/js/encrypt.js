@@ -29,6 +29,7 @@ function encryptText(text) {
     }
 
     return modifiedText;
+
 }
 
 function decryptText(text) {
@@ -85,14 +86,18 @@ const finalText = document.getElementById("final-text")
 
 function btnEncryptText() {
     const encryptedText = encryptText(initialText.value);
-    finalText.value = encryptedText;
-    document.getElementById("final-text-elements").style.visibility = "hidden";
+    if (encryptedText != "") {
+        finalText.value = encryptedText;
+        document.getElementById("final-text-elements").style.visibility = "hidden";
+    }
 }
 
 function btnDecrypt() {
     const decryptedText = decryptText(initialText.value);
-    finalText.value = decryptedText;
-    document.getElementById("final-text-elements").style.visibility = "hidden";
+    if (decryptedText != "") {
+        finalText.value = decryptedText;
+        document.getElementById("final-text-elements").style.visibility = "hidden";
+    }
 }
 
 function btnCopy() {
@@ -100,12 +105,12 @@ function btnCopy() {
     const content = document.getElementById('final-text').value;
 
     navigator.clipboard.writeText(content)
-    .then(() => {
-        console.log('Text copied to clipboard');
-    })
-    .catch(err => {
-        console.error('Error in copying text: ', err);
-    });
+        .then(() => {
+            console.log('Text copied to clipboard');
+        })
+        .catch(err => {
+            console.error('Error in copying text: ', err);
+        });
     alert('¡copiado!')
 
 }
@@ -114,13 +119,8 @@ function btnCopy() {
 document.getElementById("initial-text").addEventListener("keypress", verificar);
 function verificar(e) {
 
-    // comprovamos con una expresion regular que el caracter pulsado sea
-    // una letra, numero o un espacio
-    
     if (e.key.match(/[a-z0-9ñç\s]/i) === null) {
-
-        // Si la tecla pulsada no es la correcta, eliminado la pulsación
         e.preventDefault();
     }
-    
+
 }

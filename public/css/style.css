@@ -2,7 +2,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     position: flex;
     margin: 0 auto;
-    background-color: aquamarine;
+    background-color: #F3F5FC;
     display: grid;
     min-height: 100vh;
     grid-template-rows: auto 1fr auto;
@@ -11,7 +11,7 @@ body {
 }
 
 header {
-    background-color: coral;
+    background-color: #F3F5FC;
     height: 88px;
     position: relative;
 }
@@ -27,7 +27,7 @@ header {
 main {
     position: relative;
     padding-top: 40px;
-    background-color: gray;
+    background-color: #F3F5FC;
 }
 
 
@@ -38,51 +38,51 @@ main {
     height: calc(100% - 80px);
     top: 80px;
     left: 240px;
-    background-color: cadetblue;
+    background-color: #F3F5FC;
 }
 
 .normal-text {
     position: absolute;
     resize: none;
-    font-size: 18px;
+    font-size: 32px;
+    color: #0A3871;
+    background-color: #D9D9D9;
     width: 675px;
     height: calc(100% - 181px);
     text-transform: lowercase;
+    border: 0;
 }
 
 .notice {
     display: inline;
 }
 
-.button-encrypt {
-
+.button{
     position: absolute;
     width: 328px;
     height: 67px;
     border-radius: 24px;
-    background: #0A3871;
     border: 2px solid #0A3871;
     bottom: 40px;
     font-size: 16px;
     font-weight: bold;
-    color: #E5E5E5;
     text-align: center;
 }
 
-.button-decrypt {
-    position: absolute;
-    width: 328px;
-    height: 67px;
-    border-radius: 24px;
+.button:hover{
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+#button-encrypt {
+    color: #E5E5E5;
+    background: #0A3871;
+}
+
+#button-decrypt {
     background: #E5E5E5;
-    border: 2px solid #0A3871;
-    bottom: 40px;
-    /* left: 352px; */
     right: 0;
-    font-size: 16px;
-    font-weight: bold;
     color: #0A3871;
-    text-align: center;
 }
 
 
@@ -102,16 +102,17 @@ main {
 .decrypted-text {
     position: absolute;
     resize: none;
-    font-size: 18px;
+    font-size: 24px;
+    color: #495057;
     top: 30px;
     left: 30px;
     width: 338px;
     height: calc(100% - 181px);
-
+    border: 0;
+    background-color: #FFFFFF;
 }
 
 .output-no-text {
-    /* margin: 0 auto; */
     position: relative;
     display: grid;
     width: 340px;
@@ -141,22 +142,25 @@ main {
     text-align: center;
 }
 
-.button-copy {
-    position: absolute;
-    width: 328px;
-    height: 67px;
-    border-radius: 24px;
+#button-copy {
     background: #ffffff;
-    border: 2px solid #0A3871;
-    bottom: 40px;
     left: 36px;
-    font-size: 16px;
-    font-weight: bold;
     color: #0A3871;
 }
 
 
 footer {
+    text-align: center;
     height: 60px;
-    background-color: brown;
+    background-color: #F3F5FC;
+    align-items: center;
+    
+}
+
+.encoded{
+    font-size: 13px;
+    margin: 20px;
+    color: #0A3871;
+    font-weight: bold;
+    
 }

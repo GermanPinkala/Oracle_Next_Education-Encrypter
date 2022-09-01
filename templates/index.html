@@ -27,15 +27,15 @@
             <div class="notice"></div>
 
             <div >
-                <button class="button-encrypt" onclick="btnEncryptText()">Encriptar</button>
-                <button class="button-decrypt" onclick="btnDecrypt()">Desencriptar</button>
+                <button id="button-encrypt" class="button" onclick="btnEncryptText()">Encriptar</button>
+                <button id="button-decrypt" class="button" onclick="btnDecrypt()">Desencriptar</button>
             </div>
 
         </section>
 
         <section class="output-text">
 
-            <textarea id="final-text" cols="30" rows="10" class="decrypted-text"></textarea>
+            <textarea id="final-text" cols="30" rows="10" class="decrypted-text" disabled></textarea>
 
             <div id="final-text-elements" class="output-no-text">
                 <img class="munieco" src="../public/img/munieco.svg" alt="">
@@ -44,7 +44,7 @@
                     desencriptar.</p>
             </div>
 
-            <button class="button-copy" onclick="btnCopy()">Copiar</button>
+            <button id="button-copy" class="button" onclick="btnCopy()">Copiar</button>
             
         </section>
 
@@ -53,7 +53,7 @@
     <script src="../public/js/encrypt.js"></script>
 
     <footer>
-
+        <p class="encoded">Codificado por Pinkala Ciszlach, Germán R. - 2022</p>
     </footer>
 
 </body>
