@@ -22,32 +22,35 @@
     <main>
         <section class="input-text">
 
-            <textarea id="textarea-input" cols="30" rows="10" class="normal-text"></textarea>
+            <textarea id="initial-text" cols="30" rows="10" class="normal-text" ></textarea>
 
             <div class="notice"></div>
 
-            <div>
-                <input class="button-encrypt" type="submit" value="Encriptar">
-                <input class="button-decrypt" type="submit" value="Desencriptar">
+            <div >
+                <button class="button-encrypt" onclick="btnEncryptText()">Encriptar</button>
+                <button class="button-decrypt" onclick="btnDecrypt()">Desencriptar</button>
             </div>
 
         </section>
 
         <section class="output-text">
 
-            <textarea id="text-normal" cols="30" rows="10" class="decrypted-text"></textarea>
+            <textarea id="final-text" cols="30" rows="10" class="decrypted-text"></textarea>
 
-            <div class="output-no-text">
+            <div id="final-text-elements" class="output-no-text">
                 <img class="munieco" src="../public/img/munieco.svg" alt="">
                 <h2>Ningún mensaje fue encontrado</h2>
                 <p>Ingresa el texto que desees encriptar o
                     desencriptar.</p>
             </div>
 
-            <input class="button-copy" type="submit" value="Copiar">
+            <button class="button-copy" type="submit">Copiar</button>
+            
         </section>
 
     </main>
+
+    <script src="../public/js/encrypt.js"></script>
 
     <footer>
 

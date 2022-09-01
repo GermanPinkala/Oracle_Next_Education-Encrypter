@@ -1,73 +1,97 @@
-initialText = new String;
-function encryptText(initialText) {
-    let finalText = new String;
-    for (let index = 0; index < initialText.length; index++) {
 
-        let letter = initialText[index];
+const initialText = document.getElementById("initial-text")
+const finalText = document.getElementById("final-text")
 
-        switch (letter) {
-            case 'a': finalText.concat('ai');
-                break;                
-            case 'e': finalText.concat('enter');
-                break;
-            case 'i': finalText.concat('imes');
-                break;
-            case 'o': finalText.concat('ober');
-                break;
-            case 'u': finalText.concat('ufat');
-                break;
-            default: finalText.concat(letter);
-                break;
-        }
-    }
-
-    return finalText;
+function btnEncryptText(){
+    const encryptedText = encryptText(initialText.value);
+    finalText.value = encryptedText;
+    document.getElementById("final-text-elements").style.visibility = "hidden";
 }
 
-function decrypt(initialText) {
+function btnDecrypt(){
+    const decryptedText = decryptText(initialText.value);
+    finalText.value = decryptedText;
+    document.getElementById("final-text-elements").style.visibility = "hidden";
+}
 
-    let finalText = new String;
+function encryptText(text) {
 
-    for (let index = 0; index < initialText.length; index++) {
+    
+    let modifiedText = "";
 
-        let letter = initialText[index];
+    
+    for (let index = 0; index < text.length; index++) {
+
+        let letter = text[index];
+
+        switch (letter) {
+            case 'a': modifiedText+='ai';
+                break;                
+            case 'e': modifiedText+='enter';
+                break;
+            case 'i': modifiedText+='imes';
+                break;
+            case 'o': modifiedText+='ober';
+                break;
+            case 'u': modifiedText+='ufat';
+                break;
+            default: modifiedText+=letter;
+                break;
+        }
+        
+    }
+
+    return modifiedText;
+}
+
+function decryptText(text) {
+
+    let modifiedText = "";
+    let auxText = ""
+
+    for (let index = 0; index < text.length; index++) {
+
+        let letter = text[index];
+        // if (index == 0){
+        //     auxText = text.substring(index, index + 3);}
 
         switch (letter) {
             case 'a':
-                finalText.concat(letter);
-                if (initialText.substring(index, index + 1) == 'ai') {
-                    index = index + 1;
+                modifiedText+=letter;
+                if (text.substring(index, index + 2) == 'ai') {
+                    index += 1;
                 }
                 break;
             case 'e':
-                finalText.concat(letter);
-                if (initialText.substring(index, index + 4) == 'enter') {
-                    index = index + 4;
+                modifiedText+=letter;
+                if (text.substring(index, index + 5) == 'enter') {
+                    index += 4;
                 }
                 break;
             case 'i':
-                finalText.concat(letter);
-                if (initialText.substring(index, index + 3) == 'imes') {
-                    index = index + 3;
+                modifiedText+=letter;
+                if (text.substring(index, index + 4) == 'imes') {
+                    index += 3;
                 }
                 break;
             case 'o':
-                finalText.concat(letter);
-                if (initialText.substring(index, index + 3) == 'ober') {
-                    index = index + 3;
-                } finalText.concat('ober');
+                modifiedText+=letter;
+                if (text.substring(index, index + 4) == 'ober') {
+                    index += 3;
+                } 
                 break;
             case 'u':
-                finalText.concat(letter);
-                if (initialText.substring(index, index + 3) == 'ufat') {
-                    index = index + 3;
-                } finalText.concat('ufat');
+                modifiedText+=letter;
+                if (text.substring(index, index + 4) == 'ufat') {
+                    index += 3;
+                } 
                 break;
 
-            default: finalText.concat(letter);
+            default: modifiedText+=letter;
                 break;
         }
+
     }
 
-    return finalText;l
+    return modifiedText;  
 }
