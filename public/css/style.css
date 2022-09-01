@@ -47,6 +47,7 @@ main {
     font-size: 18px;
     width: 675px;
     height: calc(100% - 181px);
+    text-transform: lowercase;
 }
 
 .notice {
