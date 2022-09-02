@@ -4,7 +4,7 @@ body {
     margin: 0 auto;
     background-color: #F3F5FC;
     display: grid;
-    min-height: 100vh;
+    min-height: 940px;
     grid-template-rows: auto 1fr auto;
     width: 80vw;
     padding: 0 50px;
@@ -93,6 +93,7 @@ main {
     position: absolute;
     width: 400px;
     height: calc(100vh - 148px);
+    min-height: 792px;
     top: 0;
     left: 1000px;
     background-color: #FFFFFF;
