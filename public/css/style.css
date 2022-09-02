@@ -70,9 +70,12 @@ main {
 }
 
 .button:hover{
-    opacity: 0.6;
     cursor: pointer;
+    animation:shadow-inset-center 0.2s linear both} @keyframes shadow-inset-center{0%{box-shadow:inset 0 0 0 0 transparent}100%{box-shadow:inset 0 0 11px 2px rgba(0,0,0,1)}
 }
+
+
+
 
 #button-encrypt {
     color: #E5E5E5;
@@ -110,7 +113,9 @@ main {
     height: calc(100% - 181px);
     border: 0;
     background-color: #FFFFFF;
+    
 }
+
 
 .output-no-text {
     position: relative;

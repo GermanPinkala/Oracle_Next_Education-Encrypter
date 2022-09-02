@@ -84,21 +84,32 @@ function decryptText(text) {
 const initialText = document.getElementById("initial-text")
 const finalText = document.getElementById("final-text")
 
+const copyButton = document.getElementById("button-copy");
+
 function btnEncryptText() {
     const encryptedText = encryptText(initialText.value);
-    if (encryptedText != "") {
-        finalText.value = encryptedText;
+    
+    finalText.value = encryptedText;
+    if (finalText.value != "") {
         document.getElementById("final-text-elements").style.visibility = "hidden";
+        copyButton.disabled = false;
+    }else{
+        document.getElementById("final-text-elements").style.visibility = "visible";
+        copyButton.disabled = true;
     }
 }
 
 function btnDecrypt() {
     const decryptedText = decryptText(initialText.value);
-    if (decryptedText != "") {
-        finalText.value = decryptedText;
+    finalText.value = decryptedText;
+    if (finalText.value != "") {
         document.getElementById("final-text-elements").style.visibility = "hidden";
+        copyButton.disabled = false;
+    }else{
+        document.getElementById("final-text-elements").style.visibility = "visible";
+        copyButton.disabled = true;
     }
-}
+} 
 
 function btnCopy() {
 
@@ -112,7 +123,6 @@ function btnCopy() {
             console.error('Error in copying text: ', err);
         });
     alert('¡copiado!')
-
 }
 
 
@@ -124,3 +134,5 @@ function verificar(e) {
     }
 
 }
+
+
